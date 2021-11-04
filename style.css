@@ -357,7 +357,7 @@ html {
     border-radius: 50%;
     background-color: green;
     color: white;
-    transform: scale(700%);
+    transform: scale(1100%);
     transition: all 0.4s;
     z-index: -1;
 }
