@@ -9,7 +9,7 @@ html {
   }
 .container{
     display: flex;
-    justify-content: space-between;
+/*     justify-content: space-between; */
 }
 .container_left{
     height: 100vh;
