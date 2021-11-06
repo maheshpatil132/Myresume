@@ -460,7 +460,7 @@ html {
         min-height: 40%;
         /* width: 20rem; */
         transform: scale(80%);
-        margin: auto;
+        margin: 0 auto;
     }
     .navbar{
         padding: 2rem;
