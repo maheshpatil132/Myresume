@@ -341,6 +341,7 @@ html {
     width: 100%;
     margin: auto auto;
     padding: 3rem;
+    gap:2rem;
 }
 .service_box{
     position: relative;
@@ -357,6 +358,7 @@ html {
     height:28rem ;
     width:28rem ;
     margin: auto auto;
+    flex: 1 1 27rem;
 }
 .service_box:hover{
     
