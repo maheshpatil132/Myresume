@@ -18,6 +18,10 @@ html {
     position: sticky;
     top: 0px;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: all 0.3s;
 }
 .container_right{
     display: flex;
@@ -88,6 +92,7 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-height: 100vh;
 }
 
 .contact .contact_cont{
@@ -147,6 +152,8 @@ html {
    font-size: 2.5rem;
 }
 .img_cont{
+    max-height: 20rem;
+    max-width: 20rem;
     transform: scale(80%);
     background-color: white;
     border-radius: 50%;
@@ -154,6 +161,7 @@ html {
     align-items: center;
     justify-content: center;
     box-shadow: white;
+    margin: auto;
 }
 .img_cont img{
     height: 100%;
@@ -167,7 +175,7 @@ html {
 }
 .navbar{
     position: relative;
-    top: 10%;
+    /* margin-top: 3rem; */
 }
 .navlist{
   position: relative;
@@ -197,10 +205,10 @@ html {
   justify-content: center;
 }
 .container_left_bottom{
-    position: absolute;
-    bottom: 20px;
+    /* position: absolute;
+    bottom: 20px; */
     width: 100%;
-    margin: auto;
+    /* margin: auto; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -229,7 +237,7 @@ html {
 .about_box_cont{
     display: flex;
     width: 70%;
-    height: 20%;
+    height: 20vh;
     margin:  3% auto;
 }
 .about_box{
@@ -245,6 +253,7 @@ html {
     border: 1px solid lightgray;
     width: 24%;
     margin: 0% 1%;
+    padding: 5rem 1rem;
 }
 .about_box_bottom{
   position: absolute;
@@ -309,15 +318,18 @@ html {
 .nodejs{
     width: 10%;
 }
+.service{
+    padding: 5rem 2rem;
+}
 .service_heading{
-    margin: 2% 0px;
+    margin: auto 0px;
     font-size: 3.5rem;
 }
 .service_main_cont{
     display: flex;
     flex-direction: column;
     height: 90%;
-    width: 90%;
+    width: 100%;
     margin: auto;
     
 }
@@ -325,7 +337,9 @@ html {
     position: relative;
     display: flex;
     height: 40%;
-    margin: 2% 0px;
+    width: 100%;
+    margin: auto auto;
+    padding: 3rem;
 }
 .service_box{
     position: relative;
@@ -339,9 +353,9 @@ html {
     z-index: 1;
     border-radius: 6px;
     border: 1px solid lightgray;
-    height:100% ;
-    width:30% ;
-    margin: 0px 2%;
+    height:28rem ;
+    width:28rem ;
+    margin: auto auto;
 }
 .service_box:hover{
     
@@ -364,29 +378,30 @@ html {
 .service_box::before{
     content: " ";
     position: absolute;
-    top: -30px;
-    left: -30px;
-    height: 110px;
-    width: 110px;
+    top: -40%;
+    left: -40%;
+    height: 100%;
+    width: 100%;
     border-radius: 50%;
     background-color: green;
     color: white;
+    transform: scale(35%);
 }
 .box_heading{
     font-size: 3rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 .service_bottom{
-    position: absolute;
     font-size: 1.4rem;
-    top: 66%;
     font-family: 'Ubuntu', sans-serif;
     line-height: 1.6;
 }
 .code{
     color: white;
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: 1.5rem;
+    left: 1.5rem;
     font-size: 4rem;
 }
 .line{
@@ -396,7 +411,7 @@ html {
     background-color: black;
 }
 .toggle_menu{
-    position: absolute;
+    position: fixed;
     top: 10px;
     right: 20px;
     z-index: 1;
@@ -424,6 +439,7 @@ html {
     }
     .close{
         display: block;
+        z-index: 300;
     }
     .cont_style{
         width: 100%;
@@ -433,9 +449,15 @@ html {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        z-index: 999;
     }
     .container_img_cont{
-        transform: scale(50%);
+        /* height: 10rem;
+        width: 10rem; */
+        transform: scale(80%);
+    }
+    .navbar{
+        padding: 2rem;
     }
     .navbar{
         top: 0%;
@@ -446,7 +468,7 @@ html {
         align-items: center;
         justify-content: space-around;
         width: 80%;
-        margin: auto;
+        margin: 10rem auto;
     }
   }
   @media only screen and (max-width: 992px){
@@ -462,8 +484,8 @@ html {
       }
       .service_box{
           width: 80%;
-          height: 30%;
-          margin: auto auto;
+          min-height: 30%;
+          margin: 2rem auto;
       }
   }
   @media only screen and (max-width: 850px){
@@ -471,7 +493,7 @@ html {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-        grid-gap: 10px;
+        grid-gap: 1%;
     }
     .about_box{
         width: 70%;
@@ -503,24 +525,26 @@ html {
         .About{
             padding: 0%;
         }
-        .service_box::before{
-            height: 72px;
-            width: 72px;
-            top: -30px;
-            left: -25px;
-        }
+        /* .service_box::before{
+            height: 100%;
+            width: 60%;
+            top: -40%;
+            left:-25% ;
+             
+        }*/
         .code{
-            top: 7px;
-            left: 7px;
+            top: 0.7rem;
+            left: 0.7rem;
         }
 
         .service_main_cont{
             flex-direction: column;
+            flex-basis: max-content;
             margin: auto;
         }
-        .service_bottom{
+        /* .service_bottom{
             display: none;
-        }
+        } */
         .service_cont_first{
             width: 80%;
         }
