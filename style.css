@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    text-decoration: none;
 }
 html {
     scroll-behavior: smooth;
@@ -10,17 +11,22 @@ html {
 .container{
     display: flex;
 }
+body{
+    padding-left: 27rem;
+}
 .container_left{
-    height: 100vh;
-    width: 22%;
+    height: 100%;
+    width: 20%;
     background-color: rgb(37, 37, 37);
-    position: sticky;
+    position: fixed;
+    z-index: 300;
     top: 0px;
+    left: 0%;
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     transition: all 0.3s;
+    padding: 2rem;
 }
 .container_right{
     display: flex;
@@ -34,7 +40,6 @@ html {
     
 }
 .home{
-    /* background-color: rgb(197, 195, 195); */
     font-size: 4.5rem;
     display: flex;
     flex-direction: column;
@@ -76,7 +81,6 @@ html {
 }
 
 .service{
-    /* background-color: rgb(0, 255, 179); */
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -85,7 +89,6 @@ html {
    text-align: center;
 }
 .contact{
-    /* background-color: rgb(119, 0, 255); */
     background-color:lightgray;
     display: flex;
     flex-direction: column;
@@ -96,7 +99,7 @@ html {
 }
 
 .contact .contact_cont{
-    width: 50%;
+    width: 65%;
     display: flex;
     flex-direction: column;
 }
@@ -136,7 +139,6 @@ html {
 }
 
 .About{
-    /* background-color: rgb(255, 0, 170); */
     background-color:lightgray;
     display: flex;
     flex-direction: column;
@@ -152,20 +154,22 @@ html {
    font-size: 2.5rem;
 }
 .img_cont{
-    max-height: 20rem;
-    max-width: 20rem;
-    transform: scale(80%);
-    background-color: white;
+    height: 18rem;
+    width: 18rem;
     border-radius: 50%;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: white;
     margin: auto;
 }
+.nama{
+    margin-top: 3rem;
+}
 .img_cont img{
-    height: 100%;
-    width: 100%;
+    height: 18rem;
+    width: 18rem;
     border-radius: 50%;
     transform: scale(90%);
     border: 2px solid black;
@@ -175,7 +179,7 @@ html {
 }
 .navbar{
     position: relative;
-    /* margin-top: 3rem; */
+    padding: 3rem 0;
 }
 .navlist{
   position: relative;
@@ -198,17 +202,13 @@ html {
    
 }
 .navlist li .link{
-    text-decoration: none;
-    
+    text-decoration: none;  
     display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .container_left_bottom{
-    /* position: absolute;
-    bottom: 20px; */
     width: 100%;
-    /* margin: auto; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -238,7 +238,6 @@ html {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     gap: 2rem;
-    /* margin:  auto 0; */
 }
 .about_box{
     position: relative;
@@ -345,7 +344,6 @@ html {
     border-radius: 6px;
     border: 1px solid lightgray;
     height:28rem ;
-    /* width:28rem ; */
     margin: auto auto;
 }
 .service_box:hover{
@@ -363,7 +361,6 @@ html {
     background-color: green;
     color: white;
     transform: scale(1100%);
-    transition: all 0.4s;
     z-index: -1;
 }
 .service_box::before{
@@ -419,10 +416,13 @@ html {
 /* media queries */
 @media only screen and (max-width: 1042px) {
     .container_left {
-      /* min-height: 100vh; */
+      min-height: 100vh;
       padding: 5rem;
       position: absolute;
       left: -112%;
+    }
+    body{
+        padding-left: 0%;
     }
     .toggle_menu{
         display: block;
@@ -435,7 +435,7 @@ html {
         z-index: 300;
     }
     .cont_style{
-        /* min-height: 138vh; */
+        /* min-height: 100vh !important; */
         padding: 5rem;
         width: 100%;
         position: sticky;
@@ -443,18 +443,14 @@ html {
         left: 0;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
         z-index: 999;
     }
     .container_img_cont{
-        min-height: 40%;
-        /* width: 20rem; */
         transform: scale(80%);
-        margin: auto;
     }
     .navbar{
         padding: 2rem;
-        margin: auto 0px;
+        /* margin: auto 0px; */
     }
     .container_left_bottom{
         position: relative;
@@ -470,6 +466,7 @@ html {
   @media only screen and (max-width: 992px){
       html{
           font-size: 55%;
+          
       }
   }
   @media only screen and (max-width: 850px){
@@ -498,4 +495,5 @@ html {
       
 
   }
+  
 
