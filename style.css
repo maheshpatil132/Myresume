@@ -12,11 +12,11 @@ html {
     display: flex;
 }
 body{
-    padding-left: 27rem;
+    padding-left: 26rem;
 }
 .container_left{
     height: 100%;
-    width: 20%;
+    width: 26rem;
     background-color: rgb(37, 37, 37);
     position: fixed;
     z-index: 300;
